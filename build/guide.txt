@@ -1,0 +1,4 @@
+run.bat 파일 실행시 모든 서버가 열립니다.
+
+-- 필요 환경 --
+최신 nodejs, jdk 21 이상, 최신 python, 최신 docker
