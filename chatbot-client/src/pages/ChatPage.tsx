@@ -15,15 +15,15 @@ const ChatPage = () => {
     const [chats, setChats] = useState<Chat[]>([]);
     const [render, setRender] = useState(true);
     useEffect(() => {
-        fetch(`http://localhost:8080/chats/${chatId}/message`, {
+        fetch(`http://192.168.10.200:8080/chats/${chatId}/message`, {
             credentials: "include"
         })
             .then(data => data.json())
-            .then(data => setChats(prev => data))
+            .then(data => setChats(() => data))
     }, [render, chatId])
     const handleSubmit = async () => {
         setChats(prev=>[...prev, {role: "user",content: input,image: image}])
-        const response = await fetch(`http://localhost:8080/chats/${chatId}/message`, {
+        const response = await fetch(`http://192.168.10.200:8080/chats/${chatId}/message`, {
             method: "POST",
             credentials: "include",
             headers: {
@@ -34,8 +34,11 @@ const ChatPage = () => {
                 image: image
             })
         })
-        if (response.status === 200)
+        if (response.status === 200){
             setRender(prev => !prev)
+            setInput(()=>"")   
+            setImage(()=>"")   
+        }
     }
     return (
         <div className="flex-1 flex flex-col bg-gray-900 rounded-lg shadow-inner">
@@ -65,22 +68,23 @@ const ChatPage = () => {
             </div>
 
             <div className="flex flex-col p-4 border-t border-gray-700 bg-gray-800 space-y-2">
-                <div className="flex items-center">
+            <div className="flex items-center">
                     <input type="file" accept="image/*" hidden id="img"
                         onChange={(e) => {
-                            const files = e.target.files;
                             const reader = new FileReader();
-                            if (files != null)
-                                reader.readAsDataURL(files[0]);
                             reader.onload = () => {
                                 if (typeof reader.result == "string") {
                                     const base64 = reader.result.split(",")[1];
-                                    setImage(prev => base64);
+                                    setImage(() => base64);
+                                    e.target.value = ""
+                                    e.target.files = null
                                 }
                             }
+                            if (e.target.files != null)
+                                reader.readAsDataURL(e.target.files[0]);
                         }}
                     />
-                    <label for="img" className="p-2 hover:bg-gray-700 rounded-lg">
+                    <label htmlFor="img" className="p-2 hover:bg-gray-700 rounded-lg">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-6 w-6 text-gray-100"
@@ -102,6 +106,7 @@ const ChatPage = () => {
                         placeholder="메시지 입력..."
                         className="flex-1 p-3 ml-2 rounded-l-xl border border-gray-600 bg-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         onChange={(e) => setInput(e.target.value)}
+                        value={input}
                     />
                     <button
                         className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-r-xl ml-1"

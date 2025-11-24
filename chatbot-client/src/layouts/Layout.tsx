@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Menu from "../components/Menu";
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 interface chats {
     id: number,
@@ -18,7 +18,7 @@ const Layout = () => {
         }).then(data=>data.text()).then(data=>setUsername(data));
         fetch("http://localhost:8080/chats", {
             credentials: 'include'
-        }).then(data=>data.json()).then(data=>setChats((prev)=>data.chats));
+        }).then(data=>data.json()).then(data=>setChats(()=>data.chats));
     },[render]);
     useEffect(()=>{
         console.log(chats)
