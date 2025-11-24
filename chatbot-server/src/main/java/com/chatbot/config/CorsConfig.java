@@ -14,7 +14,8 @@ public class CorsConfig {
 
         // Origin 허용 (예: http://localhost:3000 등)
         corsConfiguration.addAllowedOrigin("http://localhost:5173");
-
+        corsConfiguration.addAllowedOrigin("http://192.168.10.81:5173");
+        corsConfiguration.addAllowedOrigin("http://192.168.10.200:5173");
         // 요청 헤더 허용 (예: Authorization, Content-Type 등)
         corsConfiguration.addAllowedHeader("*");
 
