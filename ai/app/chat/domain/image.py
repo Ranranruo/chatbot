@@ -1,0 +1,2 @@
+class Image:
+    data: str

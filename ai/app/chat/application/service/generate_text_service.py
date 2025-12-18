@@ -1,8 +1,6 @@
-from typing import List
-
 from app.chat.application.port.inbound.dto.generate_text_command import GenerateTextCommand
 from app.chat.application.port.inbound.generate_text_use_case import GenerateTextUseCase
-from app.chat.application.port.outbound.dto.generate_text_result import GenerateTextResult
+from app.chat.application.port.inbound.dto.generate_text_result import GenerateTextResult
 from app.chat.application.port.outbound.generate_text_port import GenerateTextPort
 
 
