@@ -12,6 +12,6 @@ import java.util.Map;
 @FeignClient(name = "chatClient", url = "http://localhost:8000")
 public interface ChatClient {
     @PostMapping("/chat")
-    Map<String, MessageDTO> generateMessage(@RequestBody List<MessageDTO> request);
+    MessageDTO generateMessage(@RequestBody List<MessageDTO> request);
 
 }

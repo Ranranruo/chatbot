@@ -10,8 +10,8 @@ REM ===================================
 REM Python 서버 실행
 REM ===================================
 cd ../ai-server
-call venv\Scripts\activate
-start uvicorn app.main:app --host 0.0.0.0 --port 8000
+call venv/Scripts/activate
+start uvicorn app.chat.main:app --host 0.0.0.0 --port 8000
 
 REM ===================================
 REM Spring Boot 서버 실행

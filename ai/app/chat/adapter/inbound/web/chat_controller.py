@@ -20,16 +20,20 @@ router = APIRouter(
     response_model=GenerateChatResponse,
 )
 def generate_chat(
-        messages: List[Message],
+        messages: List[GenerateChatRequest],
         use_case: GenerateChatUseCase = Depends(get_generate_chat_use_case)
 ):
     command: List[GenerateChatCommand] = []
 
     for message in messages:
+        images: List[str] = []
+        for image in message.images:
+            images.append(image)
+
         command.append(GenerateChatCommand(
-            role=message.role.value,
+            role=message.role,
             content=message.content,
-            images=message.images,
+            images=images,
         ))
 
     result: Message = use_case.execute(command)

@@ -70,15 +70,14 @@ public class ChatController {
             if(data.getImage()!=null)
                 dto.setImages(List.of(data.getImage()));
             else
-                dto.setImages(List.of(""));
+                dto.setImages(List.of());
             return dto;
         }).collect(Collectors.toList());
-        Map<String, MessageDTO> result = chatClient.generateMessage(clientMessages);
-        MessageDTO resultDTO = result.get("message");
+        MessageDTO result = chatClient.generateMessage(clientMessages);
         Message responseMessage = new Message();
         responseMessage.setChatId(chatId);
-        responseMessage.setContent(resultDTO.getContent());
-        responseMessage.setRole(resultDTO.getRole());
+        responseMessage.setContent(result.getContent());
+        responseMessage.setRole(result.getRole());
         messageRepository.save(responseMessage);
         return true;
     }
