@@ -42,5 +42,3 @@ def generate_chat(
         role=result.role.value,
         content=result.content,
     )
-
-

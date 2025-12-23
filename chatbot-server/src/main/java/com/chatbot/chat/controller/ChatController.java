@@ -70,7 +70,7 @@ public class ChatController {
             if(data.getImage()!=null)
                 dto.setImages(List.of(data.getImage()));
             else
-                dto.setImages(List.of());
+                dto.setImages(List.of(""));
             return dto;
         }).collect(Collectors.toList());
         MessageDTO result = chatClient.generateMessage(clientMessages);
