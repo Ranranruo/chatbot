@@ -1,5 +1,5 @@
 from app.chat.adapter.outbound.ai.chat_dapter import ChatAdapter
-from app.chat.adapter.outbound.ai.llava_repository import OllamaRepository
+from app.chat.adapter.outbound.ai.llava_repository import LlavaRepository
 from app.chat.adapter.outbound.ai.text_dapter import TextAdapter
 from app.chat.application.port.inbound.generate_chat_use_case import GenerateChatUseCase
 from app.chat.application.port.inbound.generate_text_use_case import GenerateTextUseCase
@@ -29,5 +29,5 @@ def get_generate_chat_port() -> GenerateChatPort:
         llm_repository=get_llm_repository()
     )
 
-def get_llm_repository() -> OllamaRepository:
-    return OllamaRepository()
+def get_llm_repository() -> LlavaRepository:
+    return LlavaRepository()
