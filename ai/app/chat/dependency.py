@@ -8,6 +8,9 @@ from app.chat.application.port.outbound.generate_text_port import GenerateTextPo
 from app.chat.application.service.generate_chat_service import GenerateChatService
 from app.chat.application.service.generate_text_service import GenerateTextService
 
+"""
+의존성 관리
+"""
 
 def get_generate_text_use_case() -> GenerateTextUseCase:
     return GenerateTextService(
