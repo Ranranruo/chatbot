@@ -3,7 +3,7 @@ from ollama import Message as OllamaMessage, ChatResponse
 from ollama import Image as OllamaImage
 from pyexpat.errors import messages
 
-from app.chat.adapter.outbound.ai.ollama_repository import OllamaRepository
+from app.chat.adapter.outbound.ai.llava_repository import LlavaRepository
 from app.chat.application.port.outbound.generate_chat_port import GenerateChatPort
 from app.chat.domain.message import Message
 from app.chat.domain.role import Role
@@ -12,7 +12,7 @@ from app.chat.domain.role import Role
 class ChatAdapter(GenerateChatPort):
     def __init__(
             self,
-            llm_repository: OllamaRepository,
+            llm_repository: LlavaRepository,
     ):
         self.llm_repository = llm_repository
 

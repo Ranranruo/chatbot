@@ -1,5 +1,5 @@
 from app.chat.adapter.outbound.ai.chat_dapter import ChatAdapter
-from app.chat.adapter.outbound.ai.ollama_repository import OllamaRepository
+from app.chat.adapter.outbound.ai.llava_repository import OllamaRepository
 from app.chat.adapter.outbound.ai.text_dapter import TextAdapter
 from app.chat.application.port.inbound.generate_chat_use_case import GenerateChatUseCase
 from app.chat.application.port.inbound.generate_text_use_case import GenerateTextUseCase

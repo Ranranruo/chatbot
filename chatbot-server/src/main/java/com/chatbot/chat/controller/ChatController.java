@@ -25,12 +25,22 @@ public class ChatController {
     private final ChatRepository chatRepository;
     private final MessageRepository messageRepository;
     private final ChatClient chatClient;
+
+    /**
+     * 로그인한 사용자의 채팅 목록 조회
+     * @return {@link GetChatsResponse}
+     */
     @GetMapping
     public GetChatsResponse getChats(@AuthenticationPrincipal CustomUserDetails customUserDetails) {
         GetChatsResponse response = new GetChatsResponse();
         response.setChats(chatRepository.findAllByMemberId(customUserDetails.getId()));
         return response;
     }
+
+    /**
+     * 로그인한 사용자 새 채팅 생성
+     * @return true
+     */
     @PostMapping
     public boolean createChat(
             @AuthenticationPrincipal CustomUserDetails customUserDetails
@@ -42,6 +52,10 @@ public class ChatController {
         return true;
     }
 
+    /**
+     * chat_id를 path로 받아 채팅 메세지 목록 조회
+     * @return List<{@link Message}>
+     */
     @GetMapping("/{chat_id}/message")
     public List<Message> getMessages(
             @PathVariable("chat_id") Long chatId,
@@ -50,6 +64,10 @@ public class ChatController {
         return messageRepository.findAllByChatId(chatId);
     }
 
+    /**
+     * chat_id를 path로 받아 프롬포트 메세지를 받아 새 메세지 생성
+     * @return true
+     */
     @PostMapping("/{chat_id}/message")
     public boolean generateMessage(
             @PathVariable("chat_id") Long chatId,

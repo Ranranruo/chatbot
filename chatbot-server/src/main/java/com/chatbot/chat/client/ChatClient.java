@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 import java.util.Map;
 
+
 @FeignClient(name = "chatClient", url = "http://localhost:8000")
 public interface ChatClient {
     @PostMapping("/chat")
