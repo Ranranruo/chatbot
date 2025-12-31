@@ -12,6 +12,16 @@ const Layout = () => {
     const [username, setUsername] = useState("username");
     const [render, setRender] = useState(true);
     const [chats, setChats] = useState<chats[]>([]);
+
+    // 로그인 확인
+    fetch("http://localhost:8080/auth/me", {
+        credentials: "include"
+    })
+    .then(response=> {
+        if(response.status == 401) navigate("/sign-in");
+    })
+
+    // 이름 표시
     useEffect(()=>{
         fetch("http://localhost:8080/auth/username", {
             credentials: 'include'
@@ -20,9 +30,6 @@ const Layout = () => {
             credentials: 'include'
         }).then(data=>data.json()).then(data=>setChats(()=>data.chats));
     },[render]);
-    useEffect(()=>{
-        console.log(chats)
-    }, [chats]);
 
     const newChat = async () => {
         fetch("http://localhost:8080/chats", {

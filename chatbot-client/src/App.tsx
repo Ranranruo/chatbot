@@ -5,6 +5,7 @@ import SignInPage from "./pages/SignInPage";
 import ChatPage from "./pages/ChatPage";
 const queryClient = new QueryClient();
 function App() {
+  
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>

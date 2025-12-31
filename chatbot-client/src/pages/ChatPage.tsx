@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface Chat {
     role: string,
@@ -14,6 +14,7 @@ const ChatPage = () => {
     const [image, setImage] = useState("");
     const [chats, setChats] = useState<Chat[]>([]);
     const [render, setRender] = useState(true);
+
     useEffect(() => {
         fetch(`http://192.168.10.200:8080/chats/${chatId}/message`, {
             credentials: "include"
