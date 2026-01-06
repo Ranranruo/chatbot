@@ -3,8 +3,8 @@ import { useThemeStore } from "@/stores/useThemeStore";
 
 interface ButtonProps {
     children?: string;
-    type: 'text' | 'icon' | 'number',
-    size: 'default' | 'small'
+    type?: 'text' | 'icon' | 'number',
+    size?: 'default' | 'small'
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
 }
@@ -23,18 +23,25 @@ const Primary = ({
     rightIcon
 }: ButtonProps) => {
     const isDark = useThemeStore((state) => state.isDark);
+    const WHITE = `
+        text-neutral-100
+        bg-linear-to-t from-blue-600 to-blue-500
+        border border-blue-800
+        shadow-[0_4px_6px_-1px_rgba(59,130,246,0.17),0_2px_4px_-2px_rgba(59,130,246,0.17),inset_0_2px_1px_0_rgba(255,255,255,0.22),inset_0_-2px_0.3px_0_rgba(14,56,125,0.18)]
+    `;
+    const DARK = `
+        text-blue-500
+        bg-neutral-50
+        shadow-primary-small
+    `;
     return (
         <button
             className={`
                 ${BASE.common}
                 ${BASE[size]}
-                gap-1
-                text-neutral-100
-                bg-linear-to-t from-blue-600 to-blue-500
-                border border-blue-800
-                shadow-[0_4px_6px_-1px_rgba(59,130,246,0.17),0_2px_4px_-2px_rgba(59,130,246,0.17),inset_0_2px_1px_0_rgba(255,255,255,0.22),inset_0_-2px_0.3px_0_rgba(14,56,125,0.18)]
-                `
-            }>
+                ${isDark ? DARK : WHITE}
+            `}
+        >
             {leftIcon}
             <p className="font-medium">
                 {children}
