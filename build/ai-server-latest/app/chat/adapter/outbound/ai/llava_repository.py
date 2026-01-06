@@ -5,7 +5,7 @@ from ollama import Message as OllamaMessage
 from app.chat.domain.message import Message
 
 
-class OllamaRepository:
+class LlavaRepository:
     def generate_text(self, prompt: str, images: List[str]):
         result = ollama.generate(
             model="llava:7b",

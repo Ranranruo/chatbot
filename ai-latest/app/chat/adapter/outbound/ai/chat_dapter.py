@@ -1,3 +1,4 @@
+import json
 from typing import List
 from ollama import Message as OllamaMessage, ChatResponse
 from ollama import Image as OllamaImage

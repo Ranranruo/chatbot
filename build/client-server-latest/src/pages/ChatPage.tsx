@@ -14,17 +14,18 @@ const ChatPage = () => {
     const [image, setImage] = useState("");
     const [chats, setChats] = useState<Chat[]>([]);
     const [render, setRender] = useState(true);
-
+    
     useEffect(() => {
-        fetch(`http://192.168.10.200:8080/chats/${chatId}/message`, {
+        fetch(`http://localhost:8080/chats/${chatId}/message`, {
             credentials: "include"
         })
             .then(data => data.json())
             .then(data => setChats(() => data))
     }, [render, chatId])
+
     const handleSubmit = async () => {
         setChats(prev=>[...prev, {role: "user",content: input,image: image}])
-        const response = await fetch(`http://192.168.10.200:8080/chats/${chatId}/message`, {
+        const response = await fetch(`http://localhost:8080/chats/${chatId}/message`, {
             method: "POST",
             credentials: "include",
             headers: {

@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ---------- Box Shadow ---------- */
+  --shadow-neutral-small: 0 1px 3px 0 rgba(25, 33, 61, .1);
+  --shadow-neutral-regular: 0 2px 4px 0 rgba(25, 33, 61, .08);
+  --shadow-neutral-medium: 0 8px 15px 0 rgba(25, 33, 61, .1);
+  --shadow-neutral-large: 0 8px 24px 0 rgba(25, 33, 61, .12);
+
+  --shadow-primary-small: 0 0 2px 0 rgba(77, 145, 225, .23);
+  --shadow-primary-regular: 0 4px 8px 0 rgba(77, 145, 225, .1);
+  --shadow-primary-medium: 0 8px 15px 0 rgba(77, 145, 225, .1);
+  --shadow-primary-large: 0 8px 24px 0 rgba(77, 145, 225, .1);
+
+  --shadow-secondary-small: 0 0 2px 0 rgba(155, 32, 47, .1);
+  --shadow-secondary-regular: 0 4px 8px 0 rgba(155, 32, 47, .1);
+  --shadow-secondary-medium: 0 8px 15px 0 rgba(155, 32, 47, .1);
+  --shadow-secondary-large: 0 8px 24px 0 rgba(155, 32, 47, .14);
+
+  /* ---------- Font Size ---------- */
+  --text-display-01: .875em;
+  --text-display-02: 1em;
+  --text-display-03: 1.125em;
+  --text-display-04: 1.25em;
+  --text-display-05: 1.5em;
+  --text-display-06: 1.875em;
+  --text-display-07: 2.25em;
+  --text-display-08: 3em;
+  --text-display-09: 3.75em;
+  --text-display-10: 4em;
+
+  --leading-display: 1.25;
+  --leading-display-tight: 1.15;
+  --leading-paragraph: 1.5;
+
+  /* ---------- Colors ---------- */
+  --color-primary-100: #2388FF;
+  --color-primary-200: #FF2D46;
+  --color-primary-300: #FFC700;
+  --color-primary-400: #63DE77;
+
+  --color-secondary-100: #1777E7;
+  --color-secondary-200: #EAF4FE;
+  --color-secondary-300: #DE1F35;
+  --color-secondary-400: #EFE8EA;
+  --color-secondary-500: #E79800;
+  --color-secondary-600: #FFF9E5;
+  --color-secondary-700: #37C972;
+  --color-secondary-800: #E5F8E8;
+
+  --color-neutral-100: #FFFFFF;
+  --color-neutral-200: #F8FAFF;
+  --color-neutral-300: #F1F3F7;
+  --color-neutral-400: #E1E4ED;
+  --color-neutral-500: #B4B9C9;
+  --color-neutral-600: #6D758F;
+  --color-neutral-700: #353E5C;
+  --color-neutral-800: #19213D;
+
+  /* ---------- Gradient ---------- */
+  --gradient-red: linear-gradient(45deg, #DF0018, #FFDDDF);
+  --gradient-blue: linear-gradient(45deg, #0075FF, #D0EBFF);
+  --gradient-yellow: linear-gradient(45deg, #FF9416, #FFE03A);
+  --gradient-green: linear-gradient(45deg, #3ACD52, #7DFFA2);
+}

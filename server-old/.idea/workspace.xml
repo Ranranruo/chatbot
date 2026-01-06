@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1d0c96b6-4bb0-461d-9c45-e8d4a5a327fb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../ai/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/.idea/ai.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/adapter/inbound/web/chat_controller.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/adapter/inbound/web/dto/generate_chat_request.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/adapter/inbound/web/dto/generate_chat_response.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/adapter/inbound/web/dto/generate_text_request.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/adapter/inbound/web/dto/generate_text_response.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/adapter/inbound/web/text_controller.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/adapter/outbound/ai/chat_dapter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/adapter/outbound/ai/llava_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/adapter/outbound/ai/text_dapter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/application/port/inbound/dto/generate_chat_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/application/port/inbound/dto/generate_text_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/application/port/inbound/dto/generate_text_result.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/application/port/inbound/generate_chat_use_case.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/application/port/inbound/generate_text_use_case.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/application/port/outbound/dto/generate_chat_message.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/application/port/outbound/generate_chat_port.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/application/port/outbound/generate_text_port.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/application/service/generate_chat_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/application/service/generate_text_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/dependency.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/domain/image.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/domain/message.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/domain/role.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/app/chat/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ai/run.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/ai-server-latest/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../build/ai-server-latest/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/ai-server-latest/app/chat/adapter/inbound/web/chat_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/../build/ai-server-latest/app/chat/adapter/inbound/web/chat_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/ai-server-latest/app/chat/adapter/outbound/ai/chat_dapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/../build/ai-server-latest/app/chat/adapter/outbound/ai/chat_dapter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/ai-server-latest/app/chat/adapter/outbound/ai/ollama_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/ai-server-latest/app/chat/adapter/outbound/ai/text_dapter.py" beforeDir="false" afterPath="$PROJECT_DIR$/../build/ai-server-latest/app/chat/adapter/outbound/ai/text_dapter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/ai-server-latest/app/chat/dependency.py" beforeDir="false" afterPath="$PROJECT_DIR$/../build/ai-server-latest/app/chat/dependency.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/client-server-latest/src/pages/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../build/client-server-latest/src/pages/ChatPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/eslint.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/src/components/Menu.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/src/layouts/Layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/src/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/src/pages/ChatPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/src/pages/SignInPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/src/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chatbot-client/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/ChatbotApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/auth/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/auth/dto/GetMemberResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/auth/entity/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/auth/repository/MemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/auth/security/CustomUserDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/auth/security/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/chat/client/ChatClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/chat/controller/ChatController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/chat/dto/GenerateMessageRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/chat/dto/GetChatsResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/chat/dto/MessageDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/chat/entity/Chat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/chat/entity/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/chat/repository/ChatRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/chat/repository/MessageRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/config/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/config/FeignConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/config/handler/LoginFailureHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/config/handler/LoginSuccessHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chatbot/config/handler/UnauthorizedEntryPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="36xn8mebEKf4N7tvyCdQoLuNIfJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.chatbot-server [:com.chatbot.ChatbotApplication.main()].executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/chatbot/chatbot-server&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="ChatbotApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.chatbot.ChatbotApplication" />
+      <module name="chatbot.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chatbot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="chatbot-server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="chatbot-server" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ChatbotApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d0c96b6-4bb0-461d-9c45-e8d4a5a327fb" name="Changes" comment="" />
+      <created>1765956932263</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765956932263</updated>
+    </task>
+    <servers />
+  </component>
+</project>
