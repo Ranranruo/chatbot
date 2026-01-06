@@ -4,7 +4,7 @@ import { IoSearch } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 const Home = () => {
   return ( 
-    <Button.Primary
+    <Button.Primary 
       leftIcon={<IoSearch/>}
       rightIcon={<FaArrowRight/>}
     >
