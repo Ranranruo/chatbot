@@ -1,0 +1,122 @@
+services:
+  # ollama 설정
+  ollama:
+    # 사용할 이미지 버전
+    image: ollama/ollama:latest
+
+    # 컨테이너 이름
+    container_name: ollama
+
+    # 포트: 외부포트번호/내부포트번호
+    ports:
+      - "11434:11434"
+
+    # 로컬과 ai모델 저장소 공유
+    volumes:
+      - ./volumes/ollama:/root/.ollama
+    # 컨테이너 시작 시 모델을 pull 하도록 설정
+    entrypoint: /bin/sh -c "/bin/ollama serve & sleep 5 && ollama pull llava:7b && wait"
+
+    # GPU 가속을 위한 설정 (NVIDIA 사용 시)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+    # 컨테이너가 죽으면 자동으로 다시 시작
+    restart: unless-stopped
+
+  # db 설정
+  db:
+    # 사용할 디비 이미지 및 버전
+    image: mariadb:11.2
+
+    # 컨테이너 이름
+    container_name: db
+
+    # 포트: 외부포트번호/내부포트번호
+    ports: # 3306포트가 사용중일 경우를 대비해 외부 포트를 3300으로 설정
+      - "3300:3306"
+
+    # 환경 변수 등록
+    environment:
+      - MARIADB_ROOT_PASSWORD=1234
+      - MARIADB_DATABASE=chatbot
+
+    # 로컬과 디비 데이터 저장소 공유
+    # init.sql 셋팅
+    volumes:
+      - ./volumes/db:/var/lib/mysql
+      - ./db-latest/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+  # ai server 설정
+  ai:
+    # ./ai-latest/Dockerfile을 통해 빌드
+    build: ./ai-latest
+    
+    # 컨테이너 이름
+    container_name: ai
+
+    # 포트: 외부포트번호/내부포트번호
+    ports:
+      - "8000:8000"
+
+    # 환경 변수
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+
+    # 의존하고 있는 다른 컨테이너 (의존하는 컨테이너 먼저 실행된다)
+    depends_on:
+      - ollama
+      - db
+
+  # backend(java) server 설정
+  server:
+    # ./server-latest/Dockerfile을 통해 빌드
+    build: ./server-latest
+
+    # 컨테이너 이름
+    container_name: server
+
+    # 포트: 외부포트번호/내부포트번호
+    ports:
+      - "8080:8080"
+
+    # 환경변수 등록
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mariadb://db:3306/chatbot
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=1234
+      - AI_SERVER_BASE_URL=http://ai:8000
+
+    # 의존하고 있는 다른 컨테이너 (의존하는 컨테이너 먼저 실행된다)
+    depends_on:
+      - db
+      - ai
+
+  # client server 설정
+  client:
+    build:
+      # ./client-latest/Dockerfile을 통해 빌드
+      context: ./client-latest
+      args: # 이미지 빌드 시점에만 쓰는 변수 (.tsx -> .js로 빌드시)
+        - API_BASE_URL=http://localhost:8080
+        
+    # 컨테이너 이름
+    container_name: client
+
+    # 포트: 외부포트번호/내부포트번호
+    ports:
+      - "80:80"
+
+    # 의존하고 있는 다른 컨테이너 (의존하는 컨테이너 먼저 실행된다)
+    depends_on:
+      - server
+
+
+
+
+

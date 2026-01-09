@@ -1,0 +1,31 @@
+-명령어로 실행하는법-
+프로젝트 루트경로 에서
+docker-compose up -d 
+명령어 실행시 빌드 및 실행 시작
+
+docker desktop 프로그램 설치 필요
+docker dekstop 프로그램을 통해 gui로 관리
+해당 프로젝트를 실행 및 관리하려면 docker desktop 프로그램이 설치 및 실행중이어야 합니다.
+
+docker desktop 프로그램에서 프로그램 하나씩 관리 할 수 있습니다.
+container는 현재 실행중인 서버들 images는 빌드 데이터입니다.
+
+volumes 폴더는 실행한 서버들의 데이터를 연동하여 데이터가 계속 유지될 수 있게 하는 폴더 입니다. db에는 디비데이터가 ollama에는 ollama모델을 포함합니다.
+
+-bat파일로 관리하는법- (추천)
+run.bat: 프로젝트를 빌드 및 실행합니다.
+stop.bat: 프로젝트의 실행을 멈춥니다.
+clear.bat: 프로젝트의 빌드 데이터를 삭제합니다
+
+프로젝트 빌드시 네이밍은 고정입니다.
+
+ai-latest: ai 서버
+client-latest: client 서버
+db-latest: db서버
+server-latest: backend 서버
+
+폴더 및 파일 변경시에 빌드하고 싶은 프로젝트의 이름을 위와 같이 맞추어야 합니다.
+
+
+
+
